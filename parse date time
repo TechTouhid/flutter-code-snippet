@@ -1,0 +1,5 @@
+  import 'package:intl/intl.dart';
+  parseDate(String date) {
+    final dateTime = DateTime.parse(date);
+    return DateFormat("MMMM d yyyy").format(dateTime);
+  }
