@@ -1,0 +1,18 @@
+//https://pub.dev/packages/dropdown_search
+DropdownSearch<String>(
+              items: data.map((e) {
+                return e.username;
+              }).toList(),
+              selectedItem: 'Enter Username',
+              popupProps: const PopupProps.menu(
+                showSearchBox: true,
+                showSelectedItems: true,
+                title: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text('Type Username'),
+                ),
+              ),
+              onChanged: (value) {
+                controller.emailController.text = value!;
+              },
+            ),
